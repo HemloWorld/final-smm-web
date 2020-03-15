@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+    <script src="fontawesome-free-5.12.1-web/js/solid.js"></script>
+    <script src="fontawesome-free-5.12.1-web/js/fontawesome.js"></script>
+    <title>Dashboard</title>
+
+
+</head>
+<body>
+    <!-- <div class="top-navbar">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand">Navbar</a>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
+    </div> -->
+
+    <!-- <div id="side-navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Sing Out</a></li>
+        </ul>
+    </div> -->
+    
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h4>Absensi Mahasiswa</h4>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Akun</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Filter by
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+
+                    <span></span>
+                    <span></span>
+
+                    <ul class="nav navbar-nav flex-row">
+                        <li class="nav-item"><a class="nav-link pr-3" href="">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Sign Up</a></li>
+                    </ul>
+                </div>
+            </nav>  
+            <div class="container">
+                <form id = student-data>
+                    <img src="assets/pas-foto.jpg">
+                </form>
+            </div>
+
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Tanggal</th>
+                            <th scope="col">Komputer</th>
+                            <th scope="col">Jadwal</th>
+                            <th scope="col">Datang</th>
+                            <th scope="col">Pulang</th>
+                            <th scope="col">Praktek</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(e){
+            $('#mnu-category').find('a').click(function(e) {
+                e.preventDefault();
+                var cat = $(this).text();
+                $('#srch-category').text(cat);
+                $('#txt-category').val(cat);
+            });
+        });
+    </script>
+    <script src="jquery-3.4.1.slim.min.js"></script>
+    <script src="bootstrap\js\bootstrap.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap\js\bootstrap.js"></script>
+</body>
+</html>
