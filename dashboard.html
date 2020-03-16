@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="dashboard.css">
     <script src="fontawesome-free-5.12.1-web/js/solid.js"></script>
     <script src="fontawesome-free-5.12.1-web/js/fontawesome.js"></script>
+    <script src="bootstrap\js\bootstrap.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
     <title>Dashboard</title>
 
 
@@ -33,7 +35,7 @@
     <div class="wrapper">
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h4>Absensi Mahasiswa</h4>
+                <img id="icon-smm" src="assets/Sinarmas-Logo.png">
             </div>
             <ul class="list-unstyled components">
                 <li>
@@ -48,18 +50,30 @@
         <div id="content">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Filter by
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
+                  <div class="row">    
+                    <div class="col-xs-8 col-xs-offset-2">
+                    <div class="input-group">
+                            <div class="input-group-btn search-panel">
+                                <button type="button" class="btn btn-filter dropdown-toggle" data-toggle="dropdown">
+                                  <span id="search_concept">Filter by</span> <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                  <li><a href="#NIM">NIM</a></li>
+                                  <li><a href="#Nama">Nama</a></li>
+                                  <li><a href="#Semester">Semester</a></li>
+                                  <li><a href="#Tahun Ajaran">TA</a></li>
+                                  <li><a href="#Pembimbing">Pembimbing</a></li>
+                                </ul>
+                            </div>
+                            <input type="hidden" name="search_param" value="all" id="search_param">         
+                            <input type="text" class="form-control" name="x" placeholder="Search term...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-search" type="button"><span class="glyphicon glyphicon-search"><img id="img-search" src="assets/search.png"></span></button>
+                            </span>
                         </div>
-                      </div>
+                    </div>
+              </div>
 
-                    <span></span>
                     <span></span>
 
                     <ul class="nav navbar-nav flex-row">
@@ -67,12 +81,49 @@
                         <li class="nav-item"><a class="nav-link" href="">Sign Up</a></li>
                     </ul>
                 </div>
-            </nav>  
-            <div class="container">
-                <form id = student-data>
-                    <img src="assets/pas-foto.jpg">
-                </form>
+            </nav>
+            <h6><b>Data Mahasiswa</b></h6>
+            <div class="row">
+              <div class="container">
+                <div class="box-one">
+                  <form id="student-data">
+                    <div class="row">
+                        <img id="pas-foto" src="assets/pas-foto.jpg">
+                        <ul style="list-style-type:none;">
+                          <li>NIM</li>
+                          <li>Nama MHS</li>
+                          <li>Semester</li>
+                          <li>TA</li>
+                          <li>Pembimbing</li>
+                        </ul>  
+                        <ul style="list-style-type:none;">
+                          <li>:</li>
+                          <li>:</li>
+                          <li>:</li>
+                          <li>:</li>
+                          <li>:</li>
+                        </ul>  
+                        <ul style="list-style-type:none;">
+                          <li>111123213</li>
+                          <li>Ray Indra Taufik Wijaya</li>
+                          <li>Genap 2013/2014</li>
+                          <li>KKP</li>
+                          <li>Ir. Untung Rahardja, M.TI</li>
+                        </ul>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- <div class="container">
+                <div class="box-two"> 
+                    <form id="student-discipline">
+
+                    </form>
+                </div>
+              </div> -->
             </div>
+
+
 
                 <div class="table-responsive">
                     <table class="table table-striped">
@@ -180,6 +231,6 @@
     <script src="jquery-3.4.1.slim.min.js"></script>
     <script src="bootstrap\js\bootstrap.min.js"></script>
     <script src="popper.min.js"></script>
-    <script src="bootstrap\js\bootstrap.js"></script>
+   
 </body>
 </html>
