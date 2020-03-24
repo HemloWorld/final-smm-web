@@ -21,6 +21,11 @@
 a{
     color: white;
 } */
+#btnPrint{
+    margin-left: 900px;
+    margin-bottom: 10px;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
